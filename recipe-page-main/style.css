@@ -1,0 +1,199 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Young Serif", sans-serif;
+}
+
+body {
+  background-color: hsl(30, 54%, 90%);
+  font-size: 1rem;
+}
+
+.container {
+  background-color: hsl(0, 0%, 100%);
+  width: 55rem;
+  height: 115rem;
+  margin: 5rem auto 5rem auto;
+  border-radius: 20px;
+}
+.container img {
+  height: 22rem;
+  width: 45rem;
+  margin: 2rem 0 2rem 5rem;
+  border-radius: 1rem;
+}
+.container h1,
+p {
+  margin-bottom: 1rem;
+  margin-left: 5rem;
+}
+.container p {
+  padding-right: 1rem;
+  color: hsl(30, 10%, 34%);
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+.prep {
+  background-color: hsl(330, 100%, 98%);
+  height: 12rem;
+  width: 45rem;
+  margin: 2rem 0 2rem 5rem;
+  border-radius: 1rem;
+}
+.prep h3 {
+  padding-top: 1rem;
+  margin-left: 2rem;
+  color: hsl(332, 51%, 32%);
+}
+.prep ul {
+  margin-left: 3rem;
+}
+
+.prep ul {
+  margin-top: 0.5rem;
+}
+.prep ul li {
+  padding: 1rem 0 0 1rem;
+  color: hsl(30, 10%, 34%);
+}
+.prep ul li::marker {
+  color: hsl(332, 51%, 32%);
+}
+.ingrid {
+  position: relative;
+  padding-bottom: 1rem;
+}
+.ingrid::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 3rem; /* Adjust as needed to control the "padding" */
+  right: 3rem; /* Adjust as needed to control the "padding" */
+  height: 1.5px; /* Border thickness */
+  background-color: hwb(0 86% 13%); /* Border color */
+}
+.ingrid h1 {
+  margin-left: 5rem;
+  color: hsl(14, 45%, 36%);
+}
+.ingrid ul {
+  margin-left: 6rem;
+}
+.ingrid ul li {
+  color: hsl(30, 10%, 34%);
+  padding: 0 0 1rem 1rem;
+}
+.ingrid ul li::marker {
+  color: hsl(14, 45%, 36%);
+}
+.inst {
+  position: relative;
+  margin-top: 2rem;
+  padding-bottom: 1rem;
+}
+.inst ::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 3rem; /* Adjust as needed to control the "padding" */
+  right: 3rem; /* Adjust as needed to control the "padding" */
+  height: 1.5px; /* Border thickness */
+  background-color: hwb(0 86% 13%); /* Border color */
+}
+
+.inst h1 {
+  color: hsl(14, 45%, 36%);
+}
+
+.inst ol {
+  padding: 0 4rem 0 6rem;
+}
+.inst ol li::marker {
+  color: hsl(14, 45%, 36%);
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.inst ol li {
+  padding: 0 0 1rem 0;
+  color: hsl(30, 10%, 34%);
+}
+/*NUTRITION TABLE*/
+
+.nut h1 {
+  color: hsl(14, 45%, 36%);
+  margin-top: 2rem;
+}
+.nut p {
+  margin-bottom: 2rem;
+}
+table {
+  width: 45rem;
+  margin-left: 5rem;
+  color: hsl(30, 10%, 34%);
+  border-collapse: collapse;
+}
+
+tr {
+  /*border-bottom: 1px solid pink;*/
+  position: relative;
+}
+
+tr::after {
+  content: "";
+  position: absolute;
+  bottom: 20px; /* Move the border up by adjusting this value */
+  left: 0;
+  right: 0;
+  height: 1px; /* Border thickness */
+  background-color: hwb(0 86% 13%); /* Border color */
+}
+td {
+  padding: 0 0 2rem 0rem;
+}
+
+table tr .right-cell {
+  color: hsl(14, 45%, 36%);
+  padding-left: 10rem;
+
+  font-weight: bold;
+}
+/*RESPONSIVE FOR SMALLER SCREENS*/
+@media (max-width: 380px) {
+  .container {
+    margin: 0 0 0 0;
+    height: 100%;
+    border-radius: 0;
+  }
+
+  .container img {
+    border-radius: 0;
+    margin: 0 0 0 0;
+    width: 100%;
+  }
+  .container h1 {
+    font-size: 5rem;
+  }
+  .container p {
+    font-size: 2.5rem;
+    line-height: 3rem;
+  }
+  .prep {
+    height: 20rem;
+    font-size: 2.5rem;
+  }
+  .prep h3 {
+    font-size: 3rem;
+  }
+  .ingrid {
+    font-size: 2rem;
+  }
+  .inst {
+    font-size: 2rem;
+    line-height: 3rem;
+  }
+  .nut {
+    font-size: 2rem;
+  }
+}
