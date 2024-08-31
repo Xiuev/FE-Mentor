@@ -1,0 +1,108 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Work Sans", sans-serif;
+}
+body {
+  background-image: url("/assets/images/background-pattern-desktop.svg");
+  background-color: hsl(275, 100%, 97%);
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+  position: fixed;
+}
+
+.container {
+  background-color: #fff;
+  height: 35rem;
+  width: 40rem;
+  margin: 15rem 0 0 40rem;
+  border-radius: 1rem;
+  overflow-y: auto;
+}
+.head {
+  display: flex;
+  color: hsl(292, 42%, 14%);
+  padding-top: 3rem;
+  margin: 0 0 2rem 2rem;
+  font-size: 1.5rem;
+}
+.head h1 {
+  padding-left: 1rem;
+}
+.q1,
+.q2,
+.q3,
+.q4 {
+  display: flex;
+  padding-left: 3rem;
+  margin-bottom: 4rem;
+  justify-content: space-between;
+  position: relative;
+}
+.q1::after,
+.q2::after,
+.q3::after,
+.q4::after {
+  content: "";
+  position: absolute;
+  bottom: -2rem;
+  left: 45%; /* Centering the pseudo-element */
+  width: 75%; /* Adjust width of the border as needed */
+  border-bottom: 2px solid hsl(0, 31%, 95%); /* Your desired border style */
+  transform: translateX(-50%); /* Center the border correctly */
+}
+
+.plus {
+  margin-right: 2rem;
+  cursor: pointer;
+}
+.container p {
+  padding-top: 0.5rem;
+}
+/*answer styles*/
+
+h3 .response {
+  font-weight: normal;
+  display: none;
+}
+/*SCROLLBAR STYLING*/
+.container::-webkit-scrollbar {
+  width: 0.75rem;
+}
+
+.container::-webkit-scrollbar-track {
+  background: hsl(292, 42%, 14%);
+  border-radius: 0.5rem;
+  /*margin-block: 0.5rem;*/
+}
+
+.container::-webkit-scrollbar-thumb {
+  background: hsl(292, 16%, 49%);
+  border-radius: 1rem;
+}
+/*media queries responsive*/
+@media (max-width: 1295px) {
+  .container {
+    margin: 15rem 0rem 0 25rem;
+  }
+}
+@media (max-width: 1060px) {
+  .container {
+    margin: 15rem 0rem 0 15rem;
+  }
+}
+@media (max-width: 481px) {
+  .container {
+    margin: 15rem 0rem 0 2rem;
+    height: 40rem;
+    width: 25rem;
+  }
+}
+@media (max-width: 376px) {
+  .container {
+    margin: 15rem 0rem 0 2rem;
+    height: 40rem;
+    width: 20rem;
+  }
+}
