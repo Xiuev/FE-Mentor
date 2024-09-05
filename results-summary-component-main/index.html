@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Frontend Mentor | Results summary component</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="results">
+        <h3>Your Result</h3>
+        <div class="result-score">
+          <p><span id="s76">76 </span><br><span id="grey100">of 100</span></br></p>
+        </div>
+        <div class="result-text"><h2>Great</h2>
+          <p>
+             You scored higher than 65% of<br></br>  the people
+            who have <br></br> taken these tests
+          </p></div>
+        
+      </div>
+      <div class="summary">
+        <h3>Summary</h3>
+        <ul class="sumList">
+          <li id="react"><img id="icon-react" src="" alt="react"><p><span id="react-text"></span><span class="score"> <span class="nr1"></span> <span class="fr2">/100</span></span></p></li>
+          <li id="mem"><img id="icon-mem" src="" alt="mem"><p><span id="mem-text"></span><span class="score"><span class="nr2" ></span><span class="fr2">/100</span></span></p></li>
+          <li id="verbal"><img id="icon-verbal" src="" alt="verb"><p><span id="verb-text"></span> <span class="score"><span class="nr3"></span><span class="fr2">/100</span></span></p></li>
+          <li id="visual"><img id="icon-visual" src="" alt="vis"><p><span id="visual-text"></span> <span class="score"><span class="nr4"></span><span class="fr2">/100</span></span></p></li>
+        </ul>
+        <button id="mainBtn">Continue</button>
+      </div>
+    </div>
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Carl Laguerre</a>.
+    </div>
+    <script src="/script.js"> </script>
+  </body>
+</html>

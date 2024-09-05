@@ -1,0 +1,174 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Hanken Grotesk", sans-serif;
+  background: #fff;
+}
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background-color: #fff;
+  width: 40rem;
+  margin: 17rem auto 0 auto;
+  height: 28rem;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  box-shadow: 1rem 1rem 1rem hsl(241, 100%, 89%);
+
+  /*add shadoweffect*/
+}
+
+/*RESULTS SECTION*/
+.container .results {
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  align-items: center;
+  color: #fff;
+  border-radius: 1.5rem;
+  background: linear-gradient(
+    to bottom,
+    hsl(252, 100%, 67%),
+    hsl(241, 81%, 54%)
+  );
+}
+.container .result-score {
+  display: inline-block;
+}
+.container .result-score #grey100 {
+  color: hsl(233, 6%, 72%);
+  font-weight: 400;
+}
+.container .results h3 {
+  color: hsl(233, 6%, 72%);
+  padding-top: 2rem;
+  padding-bottom: 1.5rem;
+  font-size: 1.25rem;
+}
+
+.container .results .result-score {
+  border-radius: 50%;
+  height: 10rem;
+  width: 10rem;
+  background: hsla(241, 81%, 54%, 0.2);
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+.container .results .result-score p {
+  padding-top: 2rem;
+  /*margin-top: 5rem;*/
+}
+.container .results .result-score #s76 {
+  font-size: 3rem;
+  font-weight: 800;
+}
+
+.container .results .result-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.container .results .result-text p {
+  font-size: 1rem;
+  text-align: center;
+  line-height: 0.6;
+  color: hsl(233, 6%, 72%);
+}
+.container .results .result-text h2 {
+  margin-bottom: 1rem;
+}
+/*SUMMARY SECTION*/
+.container .summary {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.container .summary h3 {
+  margin-right: 9rem;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+.container .summary .sumList {
+  list-style: none;
+}
+.summary .sumList li {
+  display: flex;
+  margin-bottom: 1.5rem;
+}
+.summary .sumList #react {
+  background: hsla(0, 100%, 80%, 0.1);
+  border-radius: 0.5rem;
+  padding: 0.5rem 1.5rem 0.75rem 1.5rem;
+  color: hsl(0, 100%, 67%);
+  font-weight: 700;
+}
+.summary .sumList #mem {
+  background: hsla(39, 100%, 60%, 0.1);
+  border-radius: 0.5rem;
+  padding: 0.5rem 1.5rem 0.75rem 1.5rem;
+  color: hsl(39, 100%, 56%);
+  font-weight: 700;
+}
+.summary .sumList #verbal {
+  background: hsla(166, 100%, 37%, 0.1);
+  border-radius: 0.5rem;
+  padding: 0.5rem 1.5rem 0.75rem 1.5rem;
+  color: hsl(166, 100%, 37%);
+  font-weight: 700;
+}
+.summary .sumList #visual {
+  background: hsla(234, 85%, 45%, 0.1);
+  border-radius: 0.5rem;
+  padding: 0.5rem 1.5rem 0.75rem 1.5rem;
+  color: hsl(234, 85%, 45%);
+  font-weight: 700;
+}
+.summary .sumList .score {
+  padding-left: 2rem;
+}
+.summary .sumList #icon-react,
+#icon-mem,
+#icon-verbal,
+#icon-visual {
+  padding-right: 0.5rem;
+}
+.summary .sumList .nr1,
+.nr2,
+.nr3,
+.nr4 {
+  color: hsl(224, 30%, 27%);
+}
+.summary .sumList .fr2 {
+  color: hsl(226, 8%, 69%);
+}
+.summary #mainBtn {
+  border: none;
+  background: hwb(217 18% 49%);
+  color: #fff;
+  padding: 1rem 5rem 1rem 5rem;
+  border-radius: 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  margin-top: 1rem;
+}
+/*RESPONSIVENESS*/
+@media (max-width: 1277px) {
+  .container {
+    margin: 17rem 28rem 0 auto;
+  }
+}
+
+@media (max-width: 850px) {
+  .container {
+    display: grid;
+    grid-template-columns: none;
+    grid-template-rows: 1fr 1fr;
+    width: 25rem;
+    height: 55rem;
+    margin: 17rem auto 0 auto;
+
+    /*add shadoweffect*/
+  }
+}
