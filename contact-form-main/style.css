@@ -1,0 +1,269 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Karla", sans-serif;
+}
+body {
+  background: hsl(148, 38%, 91%);
+}
+.container {
+  background: #fff;
+  height: 47rem;
+  width: 40rem;
+  margin: 5rem auto 0 auto;
+  border-radius: 1rem;
+  padding-top: 2rem;
+}
+.container h1 {
+  margin: 0 0 1.5rem 2.5rem;
+  color: hsl(187, 24%, 22%);
+}
+.container .grn-str {
+  color: hsl(169, 82%, 27%);
+  font-weight: 700;
+}
+
+/*
+*/
+label {
+  display: block;
+  font-weight: 500;
+  color: hsl(187, 24%, 22%);
+  margin: 0 0 0.5rem 0;
+}
+.container .name-container {
+  display: flex;
+  margin: 0 0 2rem 2.5rem;
+}
+.name-container #fname {
+  margin-right: 1rem;
+  width: 17rem;
+  height: 2.5rem;
+  border: 1px solid hsl(169, 82%, 27%);
+  border-radius: 0.5rem;
+}
+.name-container #lname {
+  width: 17rem;
+  height: 2.5rem;
+  border: 1px solid hsl(169, 82%, 27%);
+  border-radius: 0.5rem;
+}
+
+.container .email-prt {
+  margin: 0 0 2rem 2.5rem;
+}
+.email-prt #email {
+  height: 2.5rem;
+  width: 35rem;
+  border: 1px solid hsl(169, 82%, 27%);
+  border-radius: 0.5rem;
+}
+#qtype-header {
+  margin: 0 0 1rem 2.5rem;
+  font-weight: 500;
+}
+.container .q-type {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 0 2rem 2.5rem;
+}
+
+.q-type .genContainer {
+  margin-right: 1rem;
+  display: flex;
+  padding: 0.5rem 0 0.5rem 0;
+  width: 17rem;
+  border: 1px solid hsl(169, 82%, 27%);
+  border-radius: 0.5rem;
+}
+.q-type .suppContainer {
+  display: flex;
+  padding: 0.5rem 0 0.5rem 0;
+  width: 17rem;
+  border: 1px solid hsl(169, 82%, 27%);
+  border-radius: 0.5rem;
+}
+.q-type .qryLabel {
+  margin-left: 0.5rem;
+  margin-top: 0.5rem;
+}
+.q-type .radioInput {
+  margin: 0.5rem 0 0.4rem 1rem;
+  transform: scale(1.2);
+  cursor: pointer;
+  accent-color: hsl(169, 82%, 27%);
+}
+.q-type p {
+  width: 100%;
+}
+.container .msg-prt {
+  margin: 0 0 2rem 2.5rem;
+}
+.msg-prt #msg {
+  padding: 0.5em;
+  width: 35rem;
+  height: 5rem;
+  border: 1px solid hsl(169, 82%, 27%);
+  border-radius: 0.5rem;
+  resize: none;
+}
+
+.container .consent {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 0 2rem 2.5rem;
+}
+.consent p {
+  width: 100%;
+}
+.consent #consent {
+  margin-bottom: 0.5rem;
+  transform: scale(1.2);
+  appearance: none; /* Remove the default checkbox appearance */
+  width: 15px;
+  height: 15px;
+  border: 2px solid hsl(186, 15%, 59%);
+  border-radius: 3px;
+  background-color: #fff; /* Default background */
+  cursor: pointer;
+}
+.consent #consent:checked {
+  background-color: hsl(169, 82%, 27%);
+}
+.consent #consent:checked::before {
+  content: "✔"; /* Add a checkmark when checked */
+  display: block;
+  text-align: center;
+  color: white; /* Customize checkmark color */
+  font-size: 10x;
+  line-height: 18px;
+}
+.consent #consent-lbl {
+  margin: 0 0 0.5rem 1rem;
+}
+
+.container #submit {
+  margin: 0 0 0 2.5rem;
+  width: 35rem;
+  height: 3rem;
+  color: #fff;
+  background: hsl(169, 82%, 27%);
+  border-radius: 0.5rem;
+  border: none;
+  font-size: 1rem;
+}
+/*HOVER / CHECKED  EFFECTS*/
+
+.name-container #fname:hover,
+#lname:hover {
+  border: 2px solid hsl(169, 82%, 27%);
+  cursor: pointer;
+}
+.name-container #fname:focus,
+#lname:focus {
+  outline: none;
+}
+.email-prt #email:hover {
+  border: 2px solid hsl(169, 82%, 27%);
+  cursor: pointer;
+}
+.email-prt #email:focus {
+  outline: none;
+}
+
+.q-type .genContainer:hover,
+.suppContainer:hover {
+  border: 2px solid hsl(169, 82%, 27%);
+  cursor: pointer;
+}
+
+.msg-prt #msg:hover {
+  border: 2px solid hsl(169, 82%, 27%);
+  cursor: pointer;
+}
+.msg-prt #msg:focus {
+  outline: none;
+}
+/*TOAST MESSAGE*/
+
+.toast {
+  visibility: hidden;
+  background: hsl(169, 82%, 27%);
+  color: #fff;
+  width: 23rem;
+  height: 5rem;
+  z-index: 1;
+  border-radius: 1rem;
+  position: fixed;
+  bottom: 50rem;
+  right: 30rem;
+}
+.toast h4 {
+  /*margin-top: 1rem;*/
+  /*margin-left: 1.5rem;*/
+  display: flex;
+  margin: 1rem 0 0 1.5rem;
+}
+.toast img {
+  margin-right: 0.5rem;
+}
+.toast p {
+  font-size: 12px;
+  margin-top: 0.5rem;
+  margin-left: 1.5rem;
+  /*padding: 0 1rem 0 1rem;*/
+}
+/*CSS COMPONENTS?*/
+.err-clr {
+  color: hsl(0, 66%, 54%);
+}
+
+.show {
+  visibility: visible;
+}
+
+/*MEDIA QEUERIES/RESPONSIVE*/
+@media screen and (max-width: 480px) {
+  .container {
+    width: 25rem;
+    height: 65rem;
+  }
+
+  .name-container {
+    display: flex;
+    flex-direction: column;
+  }
+  .fname-prt {
+    margin-bottom: 1rem;
+  }
+
+  .email-prt #email {
+    width: 17rem;
+  }
+
+  .genContainer {
+    margin-bottom: 1rem;
+  }
+
+  .msg-prt #msg {
+    width: 17rem;
+    height: 8rem;
+  }
+
+  .container #submit {
+    width: 19rem;
+  }
+
+  .toast {
+    visibility: hidden;
+    background: hsl(169, 82%, 27%);
+    color: #fff;
+    width: 23rem;
+    height: 5rem;
+    z-index: 1;
+    border-radius: 1rem;
+    position: fixed;
+    bottom: 49rem;
+    right: 3.5rem;
+  }
+}
